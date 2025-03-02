@@ -1,8 +1,6 @@
 from library import Library
 from bookClass import Book
 
-# later implement sorting the books in a filtered order
-
 def main():
     library = Library()
 
@@ -16,5 +14,10 @@ def main():
     print('------------------------------------------------------------------------------------------------')
     library.return_book("123456")   # Return "1984"
     library.list_avalible_books()  # Both books should now be available
+    print('------------------------------------------------------------------------------------------------')
+
+    #sort by title
+    library.sort_by_title()
+    library.list_avalible_books()
 
 main()
