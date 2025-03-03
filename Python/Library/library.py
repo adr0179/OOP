@@ -30,12 +30,24 @@ class Library():
         for book in self.__books:
             if book.avalible == True:
                 print(book)
-    
-    def sort_by_title(self):
-        sort = input("Ascending or Descending Order?: ").strip().lower()
-        if sort == 'ascending':
-            self.__books.sort(key=lambda book: book.get_title())
-        elif sort == 'descending':
-            self.__books.sort(key=lambda book: book.get_title(), reverse=True)
-        else:
-            print("Invalid input. Please enter 'Ascending' or 'Descending'.")
+
+    def sort(self):
+        sort_filter = input("Sort by Author or by Title?: ").strip().lower()
+
+        if (sort_filter == 'author'):
+            sort = input("Ascending or Descending Order?: ").strip().lower()
+            if sort == 'ascending':
+                self.__books.sort(key=lambda book: book.get_title())
+            elif sort == 'descending':
+                self.__books.sort(key=lambda book: book.get_title(), reverse=True)
+            else:
+                print("Invalid input. Please enter 'Ascending' or 'Descending'.")
+
+        if (sort_filter == 'title'):
+            sort = input("Ascending or Descending Order?: ").strip().lower()
+            if sort == 'ascending':
+                self.__books.sort(key=lambda book: book.get_author())
+            elif sort == 'descending':
+                self.__books.sort(key=lambda book: book.get_author(), reverse=True)
+            else:
+                print("Invalid input. Please enter 'Ascending' or 'Descending'.")
