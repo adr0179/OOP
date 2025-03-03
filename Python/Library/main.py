@@ -16,8 +16,14 @@ def main():
     library.list_avalible_books()  # Both books should now be available
     print('------------------------------------------------------------------------------------------------')
 
-    #sort by title
-    library.sort_by_title()
+    #sort
+    library.sort()
+    library.list_avalible_books()
+
+    print('------------------------------------------------------------------------------------------------')
+
+    #sort again
+    library.sort()
     library.list_avalible_books()
 
 main()
